@@ -29,7 +29,6 @@ public class pickupSpawnerBehaviour : MonoBehaviour
                     Instantiate(healthPickupPrefab, new Vector3(Random.Range(-24, 24), 1, Random.Range(-24, 24)), transform.rotation);
                 }
                 currMisses = 0;
-                Debug.Log("Miss spawn");
             }
             else
             {
@@ -46,7 +45,6 @@ public class pickupSpawnerBehaviour : MonoBehaviour
                 {
                     currMisses += 1;
                 }
-                Debug.Log("Normal spawn");
             }
             timer = 0;
         }

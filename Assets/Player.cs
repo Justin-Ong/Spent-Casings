@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class Player : MonoBehaviour
     private Rigidbody ourBody;
     private int currCountdownCount;
     private Vector3 prevPos;
+    private Text CountdownText;
+    private Text BombText;
 
     // Start is called before the first frame update
     void Start()
@@ -24,11 +27,13 @@ public class Player : MonoBehaviour
         currCountdownCount = maxCountdownCount;
         prevPos = transform.position;
         References.player = gameObject;
-        References.countdown.GetComponent<UnityEngine.UI.Text>().text = currCountdownCount.ToString();
+        CountdownText = References.countdown.GetComponent<Text>();
+        CountdownText.text = currCountdownCount.ToString();
+        BombText = References.bombCounter.GetComponent<Text>();
+        BombText.text = bombCount.ToString();
     }
 
-    // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Vector3 directionVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         ourBody.velocity = directionVector * speed;
@@ -46,14 +51,14 @@ public class Player : MonoBehaviour
         {
             countdownTimer = 0;
         }
-        References.countdown.GetComponent<UnityEngine.UI.Text>().text = currCountdownCount.ToString();
+        CountdownText.text = currCountdownCount.ToString();
         if (currCountdownCount <= 0)
         {
             Die();
         }
 
         prevPos = transform.position;
-        References.bombCounter.GetComponent<UnityEngine.UI.Text>().text = bombCount.ToString();
+        BombText.text = bombCount.ToString();
     }
 
     private void LateUpdate()
@@ -125,7 +130,10 @@ public class Player : MonoBehaviour
 
     private void Die()
     {
-        Destroy(gameObject);
+        MeshRenderer renderer = GetComponent<MeshRenderer>();
+        renderer.enabled = false;
+        renderer.gameObject.SetActive(false);
         References.countdown.GetComponent<UnityEngine.UI.Text>().text = "Game Over\nFinal score:\n" + References.score.ToString();
+        References.isAlive = false;
     }
 }
