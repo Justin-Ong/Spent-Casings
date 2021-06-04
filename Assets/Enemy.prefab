@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8428324664745462862}
   - component: {fileID: -3178379463256867571}
   - component: {fileID: 9192716330194505288}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -129,3 +129,6 @@ MonoBehaviour:
   currHealth: 0
   player: {fileID: 6798241717721497220, guid: a8a6d43073ecd6e4caf9b7888543c62d, type: 3}
   enemyPrefab: {fileID: 8104091957478066265}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8

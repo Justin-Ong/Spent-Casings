@@ -1223,9 +1223,15 @@ PrefabInstance:
       objectReference: {fileID: 895872413}
     - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
         type: 3}
+      propertyPath: maxEnemies
+      value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
+        type: 3}
       propertyPath: enemyPrefab
       value: 
-      objectReference: {fileID: 966735070}
+      objectReference: {fileID: 8104091957478066265, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
+        type: 3}
     - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
         type: 3}
       propertyPath: playerPrefab

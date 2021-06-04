@@ -8,17 +8,19 @@ public class EnemyBehaviour : MonoBehaviour
     public int currHealth;
     public GameObject player;
     public GameObject enemyPrefab;
+    public LayerMask enemyLayer;
 
     private Rigidbody ourBody;
     private float speed;
     private bool isDead = false;
+    private RaycastHit[] collisionDetectionArray;
 
-    // Start is called before the first frame update
     void Start()
     {
         ourBody = GetComponent<Rigidbody>();
         currHealth = maxHealth;
         speed = References.maxSpeed;
+        collisionDetectionArray = new RaycastHit[1];
     }
 
     void FixedUpdate()
@@ -26,8 +28,11 @@ public class EnemyBehaviour : MonoBehaviour
         if (!isDead)
         {
             Vector3 vectorToPlayer = References.player.transform.position - transform.position;
-            ourBody.velocity = vectorToPlayer.normalized * speed;
-            //ourBody.AddForce(vectorToPlayer.normalized * speed, ForceMode.VelocityChange);
+            Vector3 distance = vectorToPlayer.normalized * speed * Time.deltaTime;
+            Vector3 newPos = transform.position + distance;
+            if (Physics.RaycastNonAlloc(transform.position, vectorToPlayer, collisionDetectionArray, distance.magnitude, enemyLayer) == 0) {
+                ourBody.MovePosition(newPos);
+            }
         }
     }
 
