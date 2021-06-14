@@ -504,6 +504,11 @@ PrefabInstance:
       propertyPath: maxCountdownCount
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 6798241717721497338, guid: a8a6d43073ecd6e4caf9b7888543c62d,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a8a6d43073ecd6e4caf9b7888543c62d, type: 3}
 --- !u!1 &705507993
@@ -1058,6 +1063,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3178379463256867571, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3178379463256867571, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 375461835041534189, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
         type: 3}
       propertyPath: m_RootOrder
@@ -1117,6 +1132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 8428324664745462862, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9192716330194505288, guid: 376adcb49eafb7d48a6edf0cdebb45c3,
         type: 3}
