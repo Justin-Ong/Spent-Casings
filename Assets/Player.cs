@@ -134,6 +134,7 @@ public class Player : MonoBehaviour
         renderer.enabled = false;
         renderer.gameObject.SetActive(false);
         References.countdown.GetComponent<UnityEngine.UI.Text>().text = "Game Over\nFinal score:\n" + References.score.ToString();
+        References.countdown.GetComponent<UnityEngine.UI.Text>().color = Color.black;
         References.isAlive = false;
     }
 }
