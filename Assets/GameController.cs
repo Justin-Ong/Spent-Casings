@@ -10,6 +10,13 @@ public class GameController : MonoBehaviour
     public static GameController controller;
 
     private List<GameObject> pooledObjects;
+    private bool isStarted;
+
+    public void Awake()
+    {
+        isStarted = false;
+        Time.timeScale = 0;
+    }
 
     public void Start()
     {
@@ -21,6 +28,15 @@ public class GameController : MonoBehaviour
             temp.GetComponent<EnemyBehaviour>().player = playerPrefab;
             temp.SetActive(false);
             pooledObjects.Add(temp);
+        }
+    }
+
+    private void Update()
+    {
+        if (!isStarted && Input.GetMouseButtonUp(0))
+        {
+            isStarted = true;
+            Time.timeScale = 1;
         }
     }
 
