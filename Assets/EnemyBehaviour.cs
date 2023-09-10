@@ -6,7 +6,7 @@ public class EnemyBehaviour : MonoBehaviour
 {
     public int maxHealth;
     public int currHealth;
-    public GameObject player;
+    public Transform player;
     public GameObject enemyPrefab;
     public LayerMask enemyLayer;
 

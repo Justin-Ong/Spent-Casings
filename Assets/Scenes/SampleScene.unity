@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366757, g: 0.48427194, b: 0.5645252, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -610,6 +610,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 626173789}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &895872419 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6798241717721497336, guid: a8a6d43073ecd6e4caf9b7888543c62d,
+    type: 3}
+  m_PrefabInstance: {fileID: 626173789}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,7 +960,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1721225055
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -962,7 +968,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721225054}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f56b0a2d8bd48a24cb5d203042e920a3, type: 3}
   m_Name: 
@@ -1240,7 +1246,7 @@ PrefabInstance:
         type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 895872413}
+      objectReference: {fileID: 895872419}
     - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
         type: 3}
       propertyPath: maxEnemies
@@ -1257,6 +1263,18 @@ PrefabInstance:
       propertyPath: playerPrefab
       value: 
       objectReference: {fileID: 895872413}
+    - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
+        type: 3}
+      propertyPath: bombPickupPrefab
+      value: 
+      objectReference: {fileID: 6356350310701564591, guid: b2bcadc3613f7524bbc92edc2b510e3b,
+        type: 3}
+    - target: {fileID: 989196680170916484, guid: e634abe0ef44770429103d2d9dd88f55,
+        type: 3}
+      propertyPath: healthPickupPrefab
+      value: 
+      objectReference: {fileID: 7547115654732144250, guid: 42ee7fcb768286e439845a6382a790f4,
+        type: 3}
     - target: {fileID: 6525508884102089407, guid: e634abe0ef44770429103d2d9dd88f55,
         type: 3}
       propertyPath: m_RootOrder
@@ -1316,6 +1334,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Controller
+      objectReference: {fileID: 0}
+    - target: {fileID: 8861426799092695554, guid: e634abe0ef44770429103d2d9dd88f55,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e634abe0ef44770429103d2d9dd88f55, type: 3}

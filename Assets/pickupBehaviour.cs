@@ -20,7 +20,7 @@ public class pickupBehaviour : MonoBehaviour
 
         if (currTime > lifeTime)
         {
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
     }
 }

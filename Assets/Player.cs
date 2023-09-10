@@ -124,7 +124,7 @@ public class Player : MonoBehaviour
             {
                 currCountdownCount += 1;
             }
-            Destroy(collision.gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 
